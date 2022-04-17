@@ -32,7 +32,7 @@ class Tui4bController extends Controller
 public function check(Request $request)
     {
     $text = ['text' => 'ログインして下さい。'];
-    return view('index',  ['text' => $text]);
+    return view('index', $text);
     }
 
     public function checkUser(Request $request)
@@ -45,7 +45,7 @@ public function check(Request $request)
     } else {
         $text = 'ログインに失敗しました';
     }
-    return view('index', ['text' => $text]);
+    return view('/', ['text' => $text]);
     }
 
   }
