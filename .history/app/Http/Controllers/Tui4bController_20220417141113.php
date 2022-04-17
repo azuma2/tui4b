@@ -25,10 +25,11 @@ class Tui4bController extends Controller
 
 
         $user = Auth::user();
-        $param = ['user' =>$user];
-        $text = ['text' => 'ログインして下さい。'];
 
-        return view('index', ['data'=>$data,$param,'text' => $text]);
+        $items = Author::paginate(4);
+        $param = ['items' => $items, 'user' =>$user];
+
+        return view('index', ['data'=>$data,'text'=>$text]);
     }
 
 

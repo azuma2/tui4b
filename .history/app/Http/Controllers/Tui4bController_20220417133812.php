@@ -23,12 +23,10 @@ class Tui4bController extends Controller
 
         $data = $request->session()->get('txt');
 
-
         $user = Auth::user();
-        $param = ['user' =>$user];
-        $text = ['text' => 'ログインして下さい。'];
 
-        return view('index', ['data'=>$data,$param,'text' => $text]);
+
+        return view('index', ['data'=>$data,$]);
     }
 
 

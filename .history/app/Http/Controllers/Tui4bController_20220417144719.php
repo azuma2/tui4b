@@ -26,7 +26,7 @@ class Tui4bController extends Controller
 
         $user = Auth::user();
         $param = ['user' =>$user];
-        $text = ['text' => 'ログインして下さい。'];
+        $text = ""
 
         return view('index', ['data'=>$data,$param,'text' => $text]);
     }
